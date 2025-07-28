@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Register Page
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+<div class="container">
+  <form method="POST" class="form-register" style="color:white">
+    {{ form.hidden_tag() }} <!--This is a hidden tag that is used to prevent CSRF attacks -->
+
+    <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png" class="rounded mx-auto d-block" alt="User Image" style="width: 100px; height: 100px;">
+    <h1 class="text-center">Create Your Account</h1>
+
+    {{ form.username.label(class="form-control-label") }}
+    {{ form.username(class="form-control form-control-lg") }}
+
+    {{ form.email_address.label(class="form-control-label") }}
+    {{ form.email_address(class="form-control form-control-lg") }}
+
+    {{ form.password1.label(class="form-control-label") }}
+    {{ form.password1(class="form-control form-control-lg") }}
+
+    {{ form.password2.label(class="form-control-label") }}
+    {{ form.password2(class="form-control form-control-lg") }}
+    <br>
+      <div>
+          <a href="{{ url_for('login_page') }}">Already have an account? Login here.</a>
+      </div>
+    <br>
+    {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+  </form>
+</div>
+</body>
+{% endblock %}

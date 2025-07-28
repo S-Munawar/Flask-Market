@@ -1,0 +1,38 @@
+# Vercel directory
+.vercel
+
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+.env.*
+
+# Docker-related files
+Dockerfile
+*.dockerignore
+
+# Key files
+*.pem
+*.key
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Byte-compiled files
+*.py[cod]
+
+# Test coverage
+htmlcov/
+*.coverage
+.coverage.*
+
+# Virtual environments
+venv/
+venv-3
+.env/

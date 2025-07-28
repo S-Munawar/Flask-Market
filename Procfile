@@ -1,0 +1,1 @@
+web: gunicorn run:app # run is the name of the file and app is the name of the Flask object
